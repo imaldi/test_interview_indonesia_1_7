@@ -41,7 +41,7 @@ class MainScreenBloc extends Bloc<MainScreenEvent, MainScreenState> {
       emit(MainScreenLoading());
       String numberString = "";
       for(int i = 1; i <= event.number; i++){
-        numberString += "$i ";
+        if(i%5 != 0 && i%7 != 0)numberString += "$i ";
         if(i%5 == 0){
           numberString += "LIMA ";
         }
